@@ -11,7 +11,7 @@ This repository contains an Airflow DAG (coinbase_elt_dag_s3_postgres) designed 
 
 ## Table of Contents
 
-1. [Architecture Diagram](#architecture-diagram)
+1. [Data Pipeline Diagram](#data-pipeline-diagram)
 2. [DAG Run](#dag-run)
 3. [S3 Bucket](#s3-bucket)
 4. [PostgreSQL Database](#postgresql-database)
@@ -21,7 +21,7 @@ This repository contains an Airflow DAG (coinbase_elt_dag_s3_postgres) designed 
 
 ---
 
-## Architecture Diagram
+## Data Pipeline Diagram
 
 ![1_S3VwV6_Gr5IzCSWUgarX4A](https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/7fa81f5e-4fee-411e-a541-ed9b852337b5)
 
