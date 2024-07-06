@@ -3,7 +3,7 @@
 "/>
 </p>
 
-<h1 align="center">Coinbase Airflow Pipeline</h1>
+<h1 align="center">Coinbase Airflow Pipeline (README FILE IN PROGRESS)</h1>
 </p>
 
 # coinbase-data-pipeline
