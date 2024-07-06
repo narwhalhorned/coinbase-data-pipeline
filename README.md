@@ -23,7 +23,14 @@ This repository contains an Airflow DAG (coinbase_elt_dag_s3_postgres) designed 
 
 ## Architecture Diagram
 
-![Screenshot 2024-07-02 142913](https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/af3c3032-4c6c-4894-8486-2bcebaa97637)
+![1_S3VwV6_Gr5IzCSWUgarX4A](https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/7fa81f5e-4fee-411e-a541-ed9b852337b5)
+
+### Key Features:
+- Automated extraction of cryptocurrency spot prices from Coinbase API.
+- Versioned storage of data in Minio S3 to manage updates and revisions.
+- Transformation of JSON data into PostgreSQL tables for analytics and reporting.
+- Error handling and retry mechanisms to ensure data reliability.
+- Email alerts on task failures for proactive monitoring and maintenance.
 
 
 #### Example:
