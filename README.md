@@ -23,7 +23,9 @@ This repository contains an Airflow DAG designed to automate the extraction, loa
 
 ## Data Pipeline Diagram
 
-![diagram1](https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/47623b58-bb4d-4440-bb2d-2b923237f654)
+<p align="center">
+  <img src="https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/47623b58-bb4d-4440-bb2d-2b923237f654" alt="Data Pipeline Diagram" width="900">
+</p>
 
 ### Key Features:
 - **Automated Data Extraction**: Fetches cryptocurrency spot prices from Coinbase API daily.
@@ -46,13 +48,20 @@ The DAG runs daily at midnight UTC, ensuring fresh data is available for analysi
 
 ## S3 Bucket
 
-### Overview:
-The Minio S3 bucket stores the JSON data files retrieved from the Coinbase API, with versioning to manage multiple data snapshots.
+### Overview
+The Minio S3 bucket is utilized to store the JSON data files retrieved from the Coinbase API. It employs versioning to manage multiple snapshots of data, ensuring data integrity and historical tracking.
 
-#### Screenshot:
-![S3 Bucket](https://path/to/your/s3_bucket_image.png)
+### Screenshots
+
+#### File Storage in S3
+<img src="https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/06f2567f-cd0e-43a5-af36-315b00615390" alt="File Storage" width="800">
+
+#### Versioning in S3
+<img src="https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/2c9e22db-045e-4931-9f05-c6571149835e" alt="Versioning" width="800">
 
 ---
+
+
 
 ## PostgreSQL Database
 
@@ -69,7 +78,7 @@ Transformed data is stored in a PostgreSQL database, making it accessible for an
   - `ltc_to_usd_rate`: Float
 
 #### Screenshot:
-![PostgreSQL Database](https://path/to/your/postgresql_database_image.png)
+![Screenshot 2024-07-09 202528](https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/d78194cf-c2ee-4776-809c-50f0638a54f9)
 
 ---
 
@@ -114,7 +123,7 @@ Visualizations include card charts for the latest BTC, ETH, and LTC rates, as we
 
 5. **Initialize PostgreSQL**:
     - Access the PostgreSQL database using your preferred client. For this project I used `DBeaver`.
-    - Create the necessary database and tables.
+    - Create the necessary database.
 
 ---
 
