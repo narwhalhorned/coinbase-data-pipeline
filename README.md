@@ -17,9 +17,7 @@ This repository contains an Airflow DAG designed to automate the extraction, loa
 5. [Visualization](#visualization)
 6. [Setup Instructions](#setup-instructions)
 7. [Usage](#usage)
-8. [Contributing](#contributing)
-9. [License](#license)
-10. [Contact](#contact)
+8. [Contact](#contact)
 
 ---
 
@@ -29,10 +27,10 @@ This repository contains an Airflow DAG designed to automate the extraction, loa
 
 ### Key Features:
 - **Automated Data Extraction**: Fetches cryptocurrency spot prices from Coinbase API daily.
-- **Versioned Storage in Minio S3**: Manages updates and revisions with S3 versioning.
+- **Versioned Storage in Minio S3**: Stores multiple versions of data files, managing updates and revisions.
 - **Data Transformation**: Converts JSON data into structured PostgreSQL tables.
 - **Error Handling**: Incorporates retry mechanisms and error alerts to maintain data integrity.
-- **Email Alerts**: Notifies users of task failures for proactive monitoring.
+- **Email Alerts**: Notifies users of task failures or task retries for proactive monitoring.
 
 ---
 
@@ -127,7 +125,18 @@ Visualizations include card charts for the latest BTC, ETH, and LTC rates, as we
 
 ### Monitoring:
 - Check the status of the DAG and its tasks via the Airflow web interface.
-- Receive email alerts on task failures for quick issue resolution.
+- Receive email alerts on task failures or on task retries for quick issue resolution.
+
+---
+
+## Data Access
+
+### For Data Analysts:
+- An Excel workbook is included for data analysts to easily access and analyze the data.
+- Data analysts can also connect directly to the PostgreSQL database for more advanced queries and analysis.
+
+### For Data Scientists:
+- Data scientists can directly access the data stored in the S3 bucket or PostgreSQL database for advanced analytics and modeling.
 
 ---
 
