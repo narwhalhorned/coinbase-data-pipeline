@@ -2,7 +2,7 @@
 <img height="150" width="150" src="https://cdn.simpleicons.org/apacheairflow/gray"/>
 </p>
 
-<h1 align="center">Coinbase Airflow Pipeline (README FILE IN PROGRESS)</h1>
+<h1 align="center">Airflow Orchestrated ELT for Coinbase API (README FILE IN PROGRESS)</h1>
 
 This repository contains an Airflow DAG designed to automate the extraction, loading to Minio S3 with versioning, and transformation of data from the Coinbase API into PostgreSQL. The DAG fetches spot prices for BTC-USD, ETH-USD, and LTC-USD on a daily basis, storing them first in a Minio S3 bucket and then transforming them into a PostgreSQL database. It includes error handling, retry mechanisms, and email alerts for failures, ensuring reliable data processing and storage.
 
