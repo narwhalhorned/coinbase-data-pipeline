@@ -23,7 +23,8 @@ This repository contains an Airflow DAG designed to automate the extraction, loa
 
 ## Data Pipeline Diagram
 
-![1_S3VwV6_Gr5IzCSWUgarX4A](https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/7fa81f5e-4fee-411e-a541-ed9b852337b5)
+![diagram1](https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/47623b58-bb4d-4440-bb2d-2b923237f654)
+
 
 ### Key Features:
 - Automated extraction of cryptocurrency spot prices from Coinbase API.
