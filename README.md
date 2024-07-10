@@ -143,7 +143,7 @@ Visualizations include price for the latest cryptocurrency rates, performance, a
 ## Usage
 
 ### Triggering the DAG:
-- The DAG is scheduled to run daily at midnight UTC as long as it is kept running.
+- The DAG is scheduled to run daily at midnight UTC.
 
 ### Monitoring:
 - Check the status of the DAG and its tasks via the Airflow web interface.
