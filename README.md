@@ -38,7 +38,8 @@ This repository contains an Airflow DAG designed to automate the extraction from
 ## DAG Run
 
 ### Overview
-The DAG runs daily at midnight UTC, ensuring fresh data is available for analysis every day.
+- The DAG runs daily at midnight UTC, ensuring fresh data is available for analysis every day.
+- The tasks included are `extract_task`, `load_to_s3_task`, `transform_to_postgres_task`.
 
 ### Screenshots
 #### Tree View:
