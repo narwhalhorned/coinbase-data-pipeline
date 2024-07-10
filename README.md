@@ -4,7 +4,7 @@
 
 <h1 align="center">Airflow Orchestrated ELT for Coinbase API (README FILE IN PROGRESS)</h1>
 
-This repository contains an Airflow DAG designed to automate the extraction, loading to Minio S3 with versioning, and transformation of data from the Coinbase API into PostgreSQL. The DAG fetches spot prices for BTC-USD, ETH-USD, and LTC-USD on a daily basis, storing them first in a Minio S3 bucket and then transforming them into a PostgreSQL database. It includes error handling, retry mechanisms, and email alerts for failures, ensuring reliable data processing and storage.
+This repository contains an Airflow DAG designed to automate the extraction from Coinbase API, loading to Minio S3 with versioning, and transformation of data from the S3 Bucket into PostgreSQL. The DAG fetches spot prices for BTC-USD, ETH-USD, and LTC-USD on a daily basis, storing them first in a Minio S3 bucket and then transforming them into a PostgreSQL database. It includes error handling, retry mechanisms, and email alerts for failures, ensuring reliable data processing and storage.
 
 ---
 
@@ -17,7 +17,6 @@ This repository contains an Airflow DAG designed to automate the extraction, loa
 5. [Visualization](#visualization)
 6. [Setup Instructions](#setup-instructions)
 7. [Usage](#usage)
-8. [Contact](#contact)
 
 ---
 
@@ -38,11 +37,19 @@ This repository contains an Airflow DAG designed to automate the extraction, loa
 
 ## DAG Run
 
-### Overview:
+### Overview
 The DAG runs daily at midnight UTC, ensuring fresh data is available for analysis every day.
 
-#### Screenshot:
-![DAG Run](https://path/to/your/dag_run_image.png)
+### Screenshots
+#### Tree View:
+<p align="center">
+  <img src="https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/686f3f28-f33c-40ee-ba3b-67620e9bc4ac" alt="DAG Run Screenshot 1" width="1000">
+</p>
+
+#### Graph View:
+<p align="center">
+  <img src="https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/8c99287a-be99-4883-af71-096fc55204d7" alt="DAG Run Screenshot 2" width="1000">
+</p>
 
 ---
 
@@ -53,10 +60,10 @@ The Minio S3 bucket is utilized to store the JSON data files retrieved from the 
 
 ### Screenshots
 
-#### File Storage in S3
+#### File Storage in S3:
 <img src="https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/06f2567f-cd0e-43a5-af36-315b00615390" alt="File Storage" width="800">
 
-#### Versioning in S3
+#### Versioning in S3:
 <img src="https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/2c9e22db-045e-4931-9f05-c6571149835e" alt="Versioning" width="800">
 
 ---
@@ -65,10 +72,10 @@ The Minio S3 bucket is utilized to store the JSON data files retrieved from the 
 
 ## PostgreSQL Database
 
-### Overview:
+### Overview
 Transformed data is stored in a PostgreSQL database, making it accessible for analytics and reporting.
 
-#### Schema:
+### Schema:
 - **Table Name**: `coinbase_data`
 - **Columns**:
   - `id`: Primary Key
@@ -77,19 +84,24 @@ Transformed data is stored in a PostgreSQL database, making it accessible for an
   - `eth_to_usd_rate`: Float
   - `ltc_to_usd_rate`: Float
 
-#### Screenshot:
+#### Screenshot
 ![Screenshot 2024-07-09 202528](https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/d78194cf-c2ee-4776-809c-50f0638a54f9)
 
 ---
 
 ## Visualization
 
-### Power BI Reports:
-Visualizations include card charts for the latest BTC, ETH, and LTC rates, as well as a year-over-year growth chart.
+### Power BI Reports
+Visualizations include price for the latest cryptocurrency rates, performance, as well as a year-over-year growth chart.
 
-#### Screenshots:
-- **Card Charts**: ![Card Charts](https://path/to/your/card_charts_image.png)
-- **Year-Over-Year Growth**: ![YoY Growth](https://path/to/your/yoy_growth_image.png)
+### Screenshots
+
+#### 2023-2024:
+<img src="https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/2d1ca6ae-d0f3-4c30-8186-7121fb1d6d23" alt="PBI 1" width="700">
+
+#### 2021-2022:
+<img src="https://github.com/narwhalhorned/coinbase-data-pipeline/assets/94519064/d78fab95-e900-4a0d-8697-249d7f9d575f" alt="PBI 2" width="700">
+
 
 ---
 
@@ -146,11 +158,5 @@ Visualizations include card charts for the latest BTC, ETH, and LTC rates, as we
 
 ### For Data Scientists:
 - Data scientists can directly access the data stored in the S3 bucket or PostgreSQL database for advanced analytics and modeling.
-
----
-
-## Contact
-
-For questions or issues, please open an issue in this repository or contact me personally.
 
 ---
